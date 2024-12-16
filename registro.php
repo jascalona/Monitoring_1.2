@@ -26,15 +26,10 @@ include "./CONTROLLER/conexion.php";
     <title>Registros</title>
 
     <!--CSS STYLES-->
-    <link rel="stylesheet" href="./CSS/style.css">
-    <link rel="stylesheet" href="./CSS/conf.css">
-    <link rel="stylesheet" href="./CSS/responsive.css">
+    <link rel="stylesheet" href="./CSS/navigation.css">
     <link rel="stylesheet" href="./CSS/FRAMEWORK/bootstrap.css">
-    <!--CSS STYLES-->
-
-    <!--BOX-ICONS-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <!--BOX-ICONS-->
+    <!--CSS STYLES-->
 
     <!--FRAMEWORK BOOTSTRAP-->
     <script src="./JS/FRAMEWORK/bootstrap.js"></script>
@@ -42,77 +37,65 @@ include "./CONTROLLER/conexion.php";
     <script src="./JS/FRAMEWORK/bootstrap_ii.js"></script>
     <!--FRAMEWORK BOOTSTRAP-->
 
-
    
     <!-- SCRIPT SEARCH-->
     <script src="./JS/search.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <!-- SCRIPT SEARCH-->
 
-    <?php
-    if ($_SESSION['roll'] == "administrator") { ?>
-
-
 </head>
 <body class="sub_page">
 
+<?php
+    if ($_SESSION['roll'] == "administrator") { ?>
 
-    <div style="background: #212F3D;" class="hero_area">
-    <!-- header section strats -->
-        <header class="header_section">
-        <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg custom_nav-container">
+        <header>
+            <nav>
+                <ul class='nav-bar'>
 
-            <div class="btn-sesion">
-                    <div class="btn-group" role="group">
-                        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        
-                        <?php
-                        echo $_SESSION["name"];
-                        ?>
+                    <div class="btn-sesion">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="button dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
 
-                        </button>
-                        <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="./CONTROLLER/close.php">Cerrar Sesion</a></li>
-                        </ul>
+                                <?php
+                                echo $_SESSION["name"];
+                                ?>
+
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./CONTROLLER/close.php">Cerrar Sesion</a></li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                
 
-          <div class="navbar-collapse" id="">
-            <div class="custom_menu-btn">
-              <button onclick="openNav()">
-                <span class="s-1"> </span>
-                <span class="s-2"> </span>
-                <span class="s-3"> </span>
-              </button>
-            </div>
-            <div id="myNav" class="overlay">
-              <div class="overlay-content">
-                <a style="color: #FF5733;" href="panel.php">Panel</a>
-                <a style="color: #C70039;" href="./control_asistencia.php">Control de Asistencias</a>
-                <a style="color: #900C3F;" href="./control_cuentas.php">Control de Cuentas</a>
-                <a style="color: #581845;" href="./registro.php">Registros</a>
-              </div>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <br>
-    <!-- end header section -->
-    </div>    
+                    <input type='checkbox' id='check' />
+                    <span class="menu">
+                        <li><a href="./panel.php">Panel</a></li>
+                        <li><a href="./control_asistencia.php">Control de Asistencia</a></li>
+                        <li><a href="./control_cuentas.php">Control de Cuentas</a></li>
+                        <li><a href="./registro.php">Registros</a></li>
+
+
+
+                        <label for="check" class="close-menu"><i class='bx bx-x'></i></label>
+                    </span>
+                    <label for="check" class="open-menu"><i class='bx bx-menu' style='color:#514f4f'></i></label>
+                </ul>
+            </nav>
+
+        </header>
+
 
      <!-- About Start -->
+    <section class="public_ii">
      <div class="container-fluid py-5">
         <div class="container py-5">
             <div class="row">
                 <div class="col-lg-5">
-                    <img class="img-fluid rounded" src="./images/xven.jpeg" alt="">
+                    <img class="img-fluid rounded" style="width: 400px;" src="./images/x.png" alt="">
                 </div>
                 <div class="col-lg-7 mt-4 mt-lg-0">
-                    <h6 class="text-uppercase">NOSOTROS</h6>
-                    <h1 class="text-dark" class="mb-4">Bienvenido(@) al modulo de registro XDV</h1>
+                    <h2 class="mb-4">Bienvenido(@) al modulo de registro XDV</h2>
                     <p>Somos un eficiente grupo empresarial, con la mejor propuesta integral de tecnología, productos, soluciones y servicios, para facilitar la gestión documental, los servicios de artes gráficas y la logística nacional.  
                         Representante Exclusivo de la marca Xerox en Venezuela, dedicada a la comercialización y distribución directa e indirecta de productos, tecnologías y soluciones Xerox para el sustento de nuestros clientes en el manejo de sus documentos.
                     </p>
@@ -128,7 +111,7 @@ include "./CONTROLLER/conexion.php";
 
                     <form action="" method="POST">
 
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Registro de Personal</button>
+                    <button type="button" class="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Registro de Personal</button>
 
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
@@ -200,7 +183,7 @@ include "./CONTROLLER/conexion.php";
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                <button type="submit" name="btn-uload" class="btn btn-primary" value="submit">Cargar Datos</button>
+                                <button type="submit" name="btn-uload" class="btn btn-dark" value="submit">Cargar Datos</button>
                             </div>
                             </div>
                         </div>
@@ -215,6 +198,7 @@ include "./CONTROLLER/conexion.php";
             </div>
         </div>
     </div>
+    </section>
     <!-- About End -->
 
 
@@ -233,8 +217,7 @@ include "./CONTROLLER/conexion.php";
          
         <br>
 
-        <div class="container-t-register">
-            <div class="table-register">
+        <div class="container-tables">
                 <table class="table table-bordered" >    
                     <thead class="table-dark">
                         <tr>
@@ -283,9 +266,10 @@ include "./CONTROLLER/conexion.php";
                     </tbody>
 
                     </table>
-                    </div>
                 </div>
 
+
+                
 
 
         <?php

@@ -133,6 +133,15 @@ button .button{
     padding: 15px;
     font-size: 14px;
 }
+
+.public_ii {
+    color: #fff;
+}
+
+.public_ii p{
+    font-size: 15px;
+    line-height: 2;
+}
 /*Style Tables responsive*/
 
 /*Diseño Desktop*/
