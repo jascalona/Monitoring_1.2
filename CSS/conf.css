@@ -1,0 +1,67 @@
+/*CONTROLDE ASISTENCIAS*/
+/*BTN-MODAL*/
+.container .mb-4{
+    color: #fff;
+}
+
+.container .list-inline{
+    color: #fff;
+}   
+
+/*TABLES CONTROL DE ASISTENCIAS*/
+.container-tables{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    background: #85929E;
+    padding: 40px;
+}
+
+.container-tables table {
+    width: 80%;
+}
+
+.container-tables table  {
+    background: #D6EAF8;
+}
+
+@media (max-width: 1100px) {
+    .container-tables table {
+        font-size: 12px;
+    }
+}
+
+
+@media (max-width: 750px) {
+    .container-tables table{
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 450px) {
+    .container-tables table{
+        font-size: 7px;
+    }
+}
+
+/*SEARCH JS CONTROL DE CUENTAS*/
+
+
+/*
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 450px;
+    padding-right: 450px;
+}
+
+
+/*Uload registro
+.container-uload-registro {
+    display: flex;
+    justify-content: center;
+    margin-bottom: ;
+
+}
+

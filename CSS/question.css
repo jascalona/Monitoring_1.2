@@ -1,0 +1,50 @@
+/*PANEL_PREGUNTAS_FRECUENTES*/
+
+.container-preguntas-frecuentes p{
+    text-align: center;
+    margin: 3%;
+    font-size: 45px;
+}
+
+.container-preguntas-frecuentes section {
+    width: 70vw;
+    padding: 40px;
+    background: rgba(235, 235, 235, 0.149);
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+    margin-bottom: 8%;
+  }
+  
+  summary{
+    background: rgb(49, 55, 63);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+   }
+   .container-preguntas-frecuentes section p  {
+    padding: 10px;
+    font-size: 10px;
+    background:white;
+    color: rgb(61, 61, 61);
+   }
+
+   @media (max-width: 700px) {
+    .container-preguntas-frecuentes section{
+        width: auto;
+    }
+
+    .container-preguntas-frecuentes p{
+        font-size: 30px;
+    }
+
+    .container-preguntas-frecuentes section p{
+        font-size: 13px;
+    }
+
+
+
+   }
