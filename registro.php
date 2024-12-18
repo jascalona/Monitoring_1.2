@@ -27,22 +27,13 @@ include "./CONTROLLER/conexion.php";
     <title>Registros</title>
 
     <!--CSS STYLES-->
+    <link rel="stylesheet" href="./CSS/FRAMEWORK/aos.css">
     <link rel="stylesheet" href="./CSS/navigation.css">
     <link rel="stylesheet" href="./CSS/FRAMEWORK/bootstrap.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!--CSS STYLES-->
 
-    <!--FRAMEWORK BOOTSTRAP-->
-    <script src="./JS/FRAMEWORK/bootstrap.js"></script>
-    <script src="./JS/FRAMEWORK/jquery.js"></script>
-    <script src="./JS/FRAMEWORK/bootstrap_ii.js"></script>
-    <!--FRAMEWORK BOOTSTRAP-->
 
-
-    <!-- SCRIPT SEARCH-->
-    <script src="./JS/search.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <!-- SCRIPT SEARCH-->
 
 </head>
 
@@ -93,15 +84,15 @@ include "./CONTROLLER/conexion.php";
             <div class="container-fluid py-5">
                 <div class="container py-5">
                     <div class="row">
-                        <div class="col-lg-5">
+                        <div class="col-lg-5" data-aos="zoom-out-right" data-aos-duration="1000">
                             <img class="img-fluid rounded" style="width: 400px;" src="./images/x.png" alt="">
                         </div>
                         <div class="col-lg-7 mt-4 mt-lg-0">
-                            <h2 class="mb-4">Bienvenido(@) al modulo de registro XDV</h2>
-                            <p>Somos un eficiente grupo empresarial, con la mejor propuesta integral de tecnología, productos, soluciones y servicios, para facilitar la gestión documental, los servicios de artes gráficas y la logística nacional.
+                            <h2 class="mb-4" data-aos="zoom-out-left" data-aos-duration="1000">Bienvenido(@) al modulo de registro XDV</h2>
+                            <p data-aos="zoom-out-left" data-aos-duration="1000">Somos un eficiente grupo empresarial, con la mejor propuesta integral de tecnología, productos, soluciones y servicios, para facilitar la gestión documental, los servicios de artes gráficas y la logística nacional.
                                 Representante Exclusivo de la marca Xerox en Venezuela, dedicada a la comercialización y distribución directa e indirecta de productos, tecnologías y soluciones Xerox para el sustento de nuestros clientes en el manejo de sus documentos.
                             </p>
-                            <P>Nuestra meta es ayudar a las pequeñas, medianas y grandes empresas a reducir la complejidad, proporcionar un entorno optimizado, reducir la impresión, mejorar sus procesos de negocios, para que puedan centrarse en la innovación de productos. Todo esto se resume en una palabra "Eficiencia" que solo es posible si cuenta con el equipo idóneo y el soporte necesario de Xerox.</P>
+                            <P data-aos="zoom-out-left" data-aos-duration="1000">Nuestra meta es ayudar a las pequeñas, medianas y grandes empresas a reducir la complejidad, proporcionar un entorno optimizado, reducir la impresión, mejorar sus procesos de negocios, para que puedan centrarse en la innovación de productos. Todo esto se resume en una palabra "Eficiencia" que solo es posible si cuenta con el equipo idóneo y el soporte necesario de Xerox.</P>
 
                             <!-- Uload registro -->
                             <div class="container-uload-registro">
@@ -119,7 +110,7 @@ include "./CONTROLLER/conexion.php";
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Nuevo Registro</h1>
+                                                    <h1 style="color: grey;" class="modal-title fs-5" id="exampleModalLabel">Nuevo Registro</h1>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
@@ -208,7 +199,7 @@ include "./CONTROLLER/conexion.php";
 
 
         <!-- start search filter -->
-        <div class="search">
+        <div class="search" data-aos="fade-up" data-aos-duration="1000">
             <div class="">
                 <form class="d-flex">
                     <input class="form-control me-2 light-table-filter" data-table="table" type="text" placeholder="Buscar...">
@@ -219,7 +210,7 @@ include "./CONTROLLER/conexion.php";
 
         <br>
 
-        <div class="container-tables">
+        <div class="container-tables" data-aos="zoom-in-right" data-aos-duration="1500">
             <table class="table table-bordered">
                 <thead class="table-dark">
                     <tr>
@@ -472,6 +463,23 @@ include "./CONTROLLER/conexion.php";
                 .classList.toggle("menu_btn-style");
         }
     </script>
+
+    <!--FRAMEWORK BOOTSTRAP-->
+    <script src="./JS/FRAMEWORK/bootstrap.js"></script>
+    <script src="./JS/FRAMEWORK/jquery.js"></script>
+    <script src="./JS/FRAMEWORK/bootstrap_ii.js"></script>
+    <script src="./JS/FRAMEWORK/aos.js"></script>
+    <!--FRAMEWORK BOOTSTRAP-->
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- SCRIPT SEARCH-->
+    <script src="./JS/search.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!-- SCRIPT SEARCH-->
+
+
 </body>
 
 </html>
