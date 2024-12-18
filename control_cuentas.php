@@ -101,7 +101,7 @@ include "./CONTROLLER/conexion.php";
                                 <h4 class="font-weight-bold mb-n1">01</h4>
                             </div>
                         </div>
-                        <div class="bg-secondary" style="padding: 30px;" >
+                        <div class="bg-secondary" style="padding: 30px;">
                             <div class="d-flex mb-3">
                                 <div class="d-flex align-items-center">
                                     <p class="text-muted ml-2" href=""></p>
@@ -169,10 +169,10 @@ include "./CONTROLLER/conexion.php";
             <div class="btn-export" data-aos="zoom-in-left" data-aos-duration="1000">
                 <form action="" method="POST">
                     <button name="export" class="button">
-                            <a href="./CONTROLLER/export_data.php">Exportar Datos <i class='bx bx-export'></i></a>
+                        <a href="./CONTROLLER/export_data.php">Exportar Datos <i class='bx bx-export'></i></a>
                     </button>
                 </form>
-            </div>    
+            </div>
 
 
         </div>
@@ -185,7 +185,7 @@ include "./CONTROLLER/conexion.php";
 
         ?>
         <br><br>
-       
+
         <div class="container-tables" data-aos="zoom-in-right" data-aos-duration="1500">
             <div class="tables-responsives">
                 <table class="table table-bordered">
@@ -245,122 +245,110 @@ include "./CONTROLLER/conexion.php";
 
         <!--SECTION VISTAS MOVIL ADMINISTRATOR-->
         <?php
-        include "./CONTROLLER/conexion.php";
-        $SQL = "SELECT m_uload.ci, m_uload.name, m_uload.surname, m_uload.customer, m_uload.status,
-        m_uload.date, m_uload.time, m_uload.location, m_Uload.cargo, m_uload.credenciales, m_uload.departamento FROM m_uload ";
-        $dato = mysqli_query($conexion, $SQL);
-
-        if ($dato->num_rows > 1) {
-            while ($fila = mysqli_fetch_array($dato)) {
-
+        include './CONTROLLER/conexion.php';
+        $sql_m = $conexion->query(" SELECT *FROM m_Uload ");
+        while ($datos_m = $sql_m->fetch_object()) {
         ?>
-                <br>
 
-                <div class="container-table-movil">
-                    <div class="fila">
-                        <div class="columna">
-                            <div class="header">CI</div>
-                            <div class="contenido"><?php echo $fila['ci']; ?></div>
-                        </div>
+            <br>
+            <div class="container-table-movil">
+                <div class="fila">
+                    <div class="columna">
+                        <div class="header">CI</div>
+                        <div class="contenido"><?= $datos_m->ci ?></div>
                     </div>
                 </div>
+            </div>
 
-                <div class="container-table-movil">
-                    <div class="fila">
-                        <div class="columna">
-                            <div class="header">Nombre</div>
-                            <div class="contenido"><?php echo $fila['name']; ?></div>
-                        </div>
+            <div class="container-table-movil">
+                <div class="fila">
+                    <div class="columna">
+                        <div class="header">Nombre</div>
+                        <div class="contenido"><?= $datos_m->name ?></div>
                     </div>
                 </div>
+            </div>
 
-                <div class="container-table-movil">
-                    <div class="fila">
-                        <div class="columna">
-                            <div class="header">Apellido</div>
-                            <div class="contenido"><?php echo $fila['surname']; ?></div>
-                        </div>
+            <div class="container-table-movil">
+                <div class="fila">
+                    <div class="columna">
+                        <div class="header">Apellido</div>
+                        <div class="contenido"><?= $datos_m->surname ?></div>
                     </div>
                 </div>
+            </div>
 
-                <div class="container-table-movil">
-                    <div class="fila">
-                        <div class="columna">
-                            <div class="header">Cliente</div>
-                            <div class="contenido"><?php echo $fila['customer']; ?></div>
-                        </div>
+            <div class="container-table-movil">
+                <div class="fila">
+                    <div class="columna">
+                        <div class="header">Cliente</div>
+                        <div class="contenido"><?= $datos_m->customer ?></div>
                     </div>
                 </div>
+            </div>
 
-                <div class="container-table-movil">
-                    <div class="fila">
-                        <div class="columna">
-                            <div class="header">Status</div>
-                            <div class="contenido"><?php echo $fila['status']; ?></div>
-                        </div>
+            <div class="container-table-movil">
+                <div class="fila">
+                    <div class="columna">
+                        <div class="header">Status</div>
+                        <div class="contenido"><?= $datos_m->status ?></div>
                     </div>
                 </div>
+            </div>
 
-                <div class="container-table-movil">
-                    <div class="fila">
-                        <div class="columna">
-                            <div class="header">Fecha</div>
-                            <div class="contenido"><?php echo $fila['date']; ?></div>
-                        </div>
+            <div class="container-table-movil">
+                <div class="fila">
+                    <div class="columna">
+                        <div class="header">Fecha</div>
+                        <div class="contenido"><?= $datos_m->date ?></div>
                     </div>
                 </div>
+            </div>
 
-                <div class="container-table-movil">
-                    <div class="fila">
-                        <div class="columna">
-                            <div class="header">Tiempo</div>
-                            <div class="contenido"><?php echo $fila['time']; ?></div>
-                        </div>
+            <div class="container-table-movil">
+                <div class="fila">
+                    <div class="columna">
+                        <div class="header">Tiempo</div>
+                        <div class="contenido"><?= $datos_m->time ?></div>
                     </div>
                 </div>
+            </div>
 
-                <div class="container-table-movil">
-                    <div class="fila">
-                        <div class="columna">
-                            <div class="header">Localidad</div>
-                            <div class="contenido"><?php echo $fila['location']; ?></div>
-                        </div>
+            <div class="container-table-movil">
+                <div class="fila">
+                    <div class="columna">
+                        <div class="header">Localidad</div>
+                        <div class="contenido"><?= $datos_m->location ?></div>
                     </div>
                 </div>
+            </div>
 
-                <div class="container-table-movil">
-                    <div class="fila">
-                        <div class="columna">
-                            <div class="header">Cargo</div>
-                            <div class="contenido"><?php echo $fila['cargo']; ?></div>
-                        </div>
+            <div class="container-table-movil">
+                <div class="fila">
+                    <div class="columna">
+                        <div class="header">Cargo</div>
+                        <div class="contenido"><?= $datos_m->cargo ?></div>
                     </div>
                 </div>
+            </div>
 
-                <div class="container-table-movil">
-                    <div class="fila">
-                        <div class="columna">
-                            <div class="header">Credenciales</div>
-                            <div class="contenido"><?php echo $fila['credenciales']; ?></div>
-                        </div>
+            <div class="container-table-movil">
+                <div class="fila">
+                    <div class="columna">
+                        <div class="header">Credenciales</div>
+                        <div class="contenido"><?= $datos_m->credenciales ?></div>
                     </div>
                 </div>
+            </div>
 
-                <div class="container-table-movil">
-                    <div class="fila">
-                        <div class="columna">
-                            <div class="header">DPT</div>
-                            <div class="contenido"><?php echo $fila['departamento']; ?></div>
-                        </div>
+            <div class="container-table-movil">
+                <div class="fila">
+                    <div class="columna">
+                        <div class="header">DPT</div>
+                        <div class="contenido"><?= $datos_m->departamento ?></div>
                     </div>
                 </div>
-
-            <?php
-            }
-        } else {
-
-            ?>
-
+            </div>
 
         <?php
         }
@@ -489,22 +477,22 @@ include "./CONTROLLER/conexion.php";
     </script>
 
 
-        <!--FRAMEWORK BOOTSTRAP-->
-        <script src="./JS/FRAMEWORK/aos.js"></script>
-        <script src="./JS/FRAMEWORK/bootstrap.js"></script>
-        <script src="./JS/FRAMEWORK/jquery.js"></script>
-        <script src="./JS/FRAMEWORK/bootstrap_ii.js"></script>
-        <script src="./JS/FRAMEWORK/aos.js"></script>
-        <!--FRAMEWORK BOOTSTRAP-->
-        <script>
-            AOS.init();
-        </script>
+    <!--FRAMEWORK BOOTSTRAP-->
+    <script src="./JS/FRAMEWORK/aos.js"></script>
+    <script src="./JS/FRAMEWORK/bootstrap.js"></script>
+    <script src="./JS/FRAMEWORK/jquery.js"></script>
+    <script src="./JS/FRAMEWORK/bootstrap_ii.js"></script>
+    <script src="./JS/FRAMEWORK/aos.js"></script>
+    <!--FRAMEWORK BOOTSTRAP-->
+    <script>
+        AOS.init();
+    </script>
 
-        <!-- SCRIPT GEOLOCALIZACION -->
-        <script src="./JS/geolocalizacion.js"></script>
-        <script src="./JS/search.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <!-- SCRIPT GEOLOCALIZACION -->
+    <!-- SCRIPT GEOLOCALIZACION -->
+    <script src="./JS/geolocalizacion.js"></script>
+    <script src="./JS/search.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!-- SCRIPT GEOLOCALIZACION -->
 
 </body>
 

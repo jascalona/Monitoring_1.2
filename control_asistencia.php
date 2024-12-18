@@ -377,7 +377,7 @@ include "./CONTROLLER/conexion.php";
                 <div class="fila">
                     <div class="columna">
                         <div class="header">Localidad</div>
-                        <div class="contenido"><?= $datos_m->location ?></div>
+                        <div style="font-size: 10px;" class="contenido"><?= $datos_m->location ?></div>
                     </div>
                 </div>
             </div>
