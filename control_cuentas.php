@@ -24,6 +24,7 @@ include "./CONTROLLER/conexion.php";
     <title>Control de Cuentas</title>
 
     <!--CSS STYLES-->
+    <link rel="stylesheet" href="./CSS/FRAMEWORK/aos.css">
     <link rel="stylesheet" href="./CSS/navigation.css">
     <link rel="stylesheet" href="./CSS/style.css">
     <link rel="stylesheet" href="./CSS/FRAMEWORK/bootstrap.css">
@@ -33,16 +34,7 @@ include "./CONTROLLER/conexion.php";
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!--BOX-ICONS-->
 
-    <!--FRAMEWORK BOOTSTRAP-->
-    <script src="./JS/FRAMEWORK/bootstrap.js"></script>
-    <script src="./JS/FRAMEWORK/jquery.js"></script>
-    <script src="./JS/FRAMEWORK/bootstrap_ii.js"></script>
-    <!--FRAMEWORK BOOTSTRAP-->
 
-    <!-- SCRIPT SEARCH-->
-    <script src="./JS/search.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <!-- SCRIPT SEARCH-->
 
 
 </head>
@@ -96,11 +88,12 @@ include "./CONTROLLER/conexion.php";
         <!-- Blog Start -->
         <div class="container-fluid pt-5">
             <div class="container">
-                <div class="text-center pb-2">
+                <div class="text-center pb-2" data-aos="fade-right" data-aos-duration="1500">
                     <h1 style="color: #fff;" class="mb-4"><?php echo $_SESSION['name']; ?>, Bienvenido al portal de Socios XDV</h1>
                 </div>
                 <div class="row">
-                    <div class="col-md-6 mb-5">
+
+                    <div class="col-md-6 mb-5" data-aos="flip-right" data-aos-duration="1500">
                         <div class="position-relative">
                             <img class="img-fluid w-100" src="./images/computer_cuentas.avif" alt="">
                             <div class="position-absolute bg-primary d-flex flex-column align-items-center justify-content-center rounded-circle"
@@ -108,7 +101,7 @@ include "./CONTROLLER/conexion.php";
                                 <h4 class="font-weight-bold mb-n1">01</h4>
                             </div>
                         </div>
-                        <div class="bg-secondary" style="padding: 30px;">
+                        <div class="bg-secondary" style="padding: 30px;" >
                             <div class="d-flex mb-3">
                                 <div class="d-flex align-items-center">
                                     <p class="text-muted ml-2" href=""></p>
@@ -122,7 +115,7 @@ include "./CONTROLLER/conexion.php";
                         </div>
                     </div>
 
-                    <div class="col-md-6 mb-4">
+                    <div class="col-md-6 mb-5" data-aos="flip-left" data-aos-duration="1500">
                         <div class="position-relative">
                             <iframe style="width: 100%;" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15692.935450111461!2d-66.84468849999999!3d10.4822217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sve!4v1728310897199!5m2!1ses-419!2sve" width="600" height="420" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             <div class="position-absolute bg-primary d-flex flex-column align-items-center justify-content-center rounded-circle"
@@ -139,7 +132,7 @@ include "./CONTROLLER/conexion.php";
                                 </div>
                             </div>
                             <h4 style="color: #fff;" class="font-weight-bold mb-3">Control de Salidas y Entradas</h4>
-                            <p style="color: #fff;">Lleva un control de entradas y salidas con esta asistencia virtual, conoce la hora, fecha y ubicacion en tiempo real mediante coordenadas generadas por GPS.</p>
+                            <p style="color: #fff;">Lleva un control de entradas y salidas con esta asistencia virtual conoce la hora, fecha y ubicacion en tiempo real mediante coordenadas generadas por GPS.</p>
                         </div>
                     </div>
                 </div>
@@ -151,7 +144,7 @@ include "./CONTROLLER/conexion.php";
 
 
         <!-- start search filter -->
-        <div class="search">
+        <div class="search" data-aos="fade-up" data-aos-duration="1000">
             <div class="container">
                 <form class="">
                     <input class="form-control me-2 light-table-filter" data-table="table" type="text" placeholder="Buscar...">
@@ -165,21 +158,21 @@ include "./CONTROLLER/conexion.php";
 
             <?php include './CONTROLLER/drop_m.php'; ?>
             <form action="" method="POST">
-                <div class="btn-drop-m">
+                <div class="btn-drop-m" data-aos="zoom-in-right" data-aos-duration="1000">
                     <button type="submit" name="drop" class="button" value="enviar">
-                        <p>limpiar datos <i class='bx bx-brush-alt'></i></p>
+                        <a>limpiar datos <i class='bx bx-brush-alt'></i></a>
                     </button>
                 </div>
             </form>
 
 
-            <div class="btn-export">
+            <div class="btn-export" data-aos="zoom-in-left" data-aos-duration="1000">
                 <form action="" method="POST">
                     <button name="export" class="button">
-                        <a href="./CONTROLLER/export_data.php"><p>Exportar Datos <i class='bx bx-export'></i></p></a>
+                            <a href="./CONTROLLER/export_data.php">Exportar Datos <i class='bx bx-export'></i></a>
                     </button>
                 </form>
-            </div>
+            </div>    
 
 
         </div>
@@ -192,75 +185,63 @@ include "./CONTROLLER/conexion.php";
 
         ?>
         <br><br>
-        <div class="container-tables">
-            <table class="table table-bordered">
+       
+        <div class="container-tables" data-aos="zoom-in-right" data-aos-duration="1500">
+            <div class="tables-responsives">
+                <table class="table table-bordered">
 
-                <thead class="table-dark">
-                    <tr>
-                        <th class="col">CI</th>
-                        <th class="col">Nombre</th>
-                        <th class="col">Apellido</th>
-                        <th class="col">Cliente</th>
-                        <th class="col">Status</th>
-                        <th class="col">Fecha</th>
-                        <th class="col">Tiempo</th>
-                        <th class="col">Localidad</th>
-                        <th class="col">Cargo</th>
-                        <th class="col">Credenciales</th>
-                        <th class="col">DPT</th>
-                    </tr>
+                    <thead class="table-dark">
+                        <tr>
+                            <th class="col">CI</th>
+                            <th class="col">Nombre</th>
+                            <th class="col">Apellido</th>
+                            <th class="col">Cliente</th>
+                            <th class="col">Status</th>
+                            <th class="col">Fecha</th>
+                            <th class="col">Tiempo</th>
+                            <th class="col">Localidad</th>
+                            <th class="col">Cargo</th>
+                            <th class="col">Credenciales</th>
+                            <th class="col">DPT</th>
+                        </tr>
 
-                </thead>
-                <tbody>
-
-
-                    <?php
-
-                    include "./CONTROLLER/conexion.php";
-                    $SQL = "SELECT m_uload.ci, m_uload.name, m_uload.surname, m_uload.customer, m_uload.status,
-                        m_uload.date, m_uload.time, m_uload.location, m_Uload.cargo, m_uload.credenciales, m_uload.departamento FROM m_uload
-                        ";
-                    $dato = mysqli_query($conexion, $SQL);
-
-                    if ($dato->num_rows > 1) {
-                        while ($fila = mysqli_fetch_array($dato)) {
-
-                    ?>
-                            <tr>
-                                <td><?php echo $fila['ci']; ?></td>
-                                <td><?php echo $fila['name']; ?></td>
-                                <td><?php echo $fila['surname']; ?></td>
-                                <td><?php echo $fila['customer']; ?></td>
-                                <td><?php echo $fila['status']; ?></td>
-                                <td><?php echo $fila['date']; ?></td>
-                                <td><?php echo $fila['time']; ?></td>
-                                <td><?php echo $fila['location']; ?></td>
-                                <td><?php echo $fila['cargo']; ?></td>
-                                <td><?php echo $fila['credenciales']; ?></td>
-                                <td><?php echo $fila['departamento']; ?></td>
-                            </tr>
+                    </thead>
+                    <tbody>
 
 
                         <?php
-                        }
-                    } else {
+                        include "./CONTROLLER/conexion.php";
 
+                        $sql = $conexion->query(" SELECT *FROM  m_Uload ");
+                        while ($datos = $sql->fetch_object()) {
                         ?>
-                        <tr class="text-center">
-                            <td colspan="16">No existen registros</td>
-                        </tr>
 
-                    <?php
+                            <tr>
+                                <td><?= $datos->ci ?></td>
+                                <td><?= $datos->name ?></td>
+                                <td><?= $datos->surname ?></td>
+                                <td><?= $datos->customer ?></td>
+                                <td><?= $datos->status ?></td>
+                                <td><?= $datos->date ?></td>
+                                <td><?= $datos->time ?></td>
+                                <td><?= $datos->location ?></td>
+                                <td><?= $datos->cargo ?></td>
+                                <td><?= $datos->credenciales ?></td>
+                                <td><?= $datos->departamento ?></td>
 
-                    }
+                            </tr>
 
-                    ?>
+                        <?php
 
-                </tbody>
-            </table>
+                        }
+                        ?>
+                    </tbody>
+                </table>
 
+            </div>
 
         </div>
+
 
         <!--SECTION VISTAS MOVIL ADMINISTRATOR-->
         <?php
@@ -379,9 +360,7 @@ include "./CONTROLLER/conexion.php";
         } else {
 
             ?>
-            <tr class="text-center">
-                <td colspan="16">No existen registros</td>
-            </tr>
+
 
         <?php
         }
@@ -508,6 +487,24 @@ include "./CONTROLLER/conexion.php";
                 .classList.toggle("menu_btn-style");
         }
     </script>
+
+
+        <!--FRAMEWORK BOOTSTRAP-->
+        <script src="./JS/FRAMEWORK/aos.js"></script>
+        <script src="./JS/FRAMEWORK/bootstrap.js"></script>
+        <script src="./JS/FRAMEWORK/jquery.js"></script>
+        <script src="./JS/FRAMEWORK/bootstrap_ii.js"></script>
+        <script src="./JS/FRAMEWORK/aos.js"></script>
+        <!--FRAMEWORK BOOTSTRAP-->
+        <script>
+            AOS.init();
+        </script>
+
+        <!-- SCRIPT GEOLOCALIZACION -->
+        <script src="./JS/geolocalizacion.js"></script>
+        <script src="./JS/search.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <!-- SCRIPT GEOLOCALIZACION -->
 
 </body>
 

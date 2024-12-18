@@ -87,39 +87,18 @@ include "./CONTROLLER/conexion.php";
                     <div class="row align-items-center">
                         <div class="col-lg-5">
 
-                            <div id="carouselExampleCaptions" class="carousel slide">
-                                <div class="carousel-indicators">
-                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                </div>
+                            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="./images/asistencia_1.avif" class="d-block w-100" alt="...">
-                                        <div class="carousel-caption d-none d-md-block">
-                                            <h5>Monitoring Program</h5>
-                                            <p>Lo que sabemos es una gota, lo que ignoramos es un océano!</p>
-                                        </div>
+                                        <img src="./images/colaboracion.png" class="d-block w-100" alt="...">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="./images/asistencia_2.avif" class="d-block w-100" alt="...">
-                                        <div class="carousel-caption d-none d-md-block">
-                                        </div>
+                                        <img src="./images/analisis.png" class="d-block w-100" alt="...">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="./images/asistencia_3.avif" class="d-block w-100" alt="...">
-                                        <div class="carousel-caption d-none d-md-block">
-                                        </div>
+                                        <img src="./images/clasificacion.png" class="d-block w-100" alt="...">
                                     </div>
                                 </div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
                             </div>
 
                         </div>
@@ -267,7 +246,7 @@ include "./CONTROLLER/conexion.php";
         include "./CONTROLLER/Uload.php";
         ?>
 
-        <div class="container-tables">
+        <div class="container-tables" data-aos="zoom-in-right" data-aos-duration="1500">
             <div class="tables-responsives">
                 <table class="table table-bordered">
 
@@ -331,8 +310,7 @@ include "./CONTROLLER/conexion.php";
         ?>
 
             <br>
-
-            <div class="container-table-movil">
+            <div class="container-table-movil" data-aos="fade-right" data-aos-duration="1000">
                 <div class="fila">
                     <div class="columna">
                         <div class="header">CI</div>
@@ -341,7 +319,7 @@ include "./CONTROLLER/conexion.php";
                 </div>
             </div>
 
-            <div class="container-table-movil">
+            <div class="container-table-movil" data-aos="fade-left" data-aos-duration="1000">
                 <div class="fila">
                     <div class="columna">
                         <div class="header">Nombre</div>
@@ -350,7 +328,7 @@ include "./CONTROLLER/conexion.php";
                 </div>
             </div>
 
-            <div class="container-table-movil">
+            <div class="container-table-movil" data-aos="fade-right" data-aos-duration="1000">
                 <div class="fila">
                     <div class="columna">
                         <div class="header">Apellido</div>
@@ -359,7 +337,7 @@ include "./CONTROLLER/conexion.php";
                 </div>
             </div>
 
-            <div class="container-table-movil">
+            <div class="container-table-movil" data-aos="fade-left" data-aos-duration="1000">
                 <div class="fila">
                     <div class="columna">
                         <div class="header">Cliente</div>
@@ -368,7 +346,7 @@ include "./CONTROLLER/conexion.php";
                 </div>
             </div>
 
-            <div class="container-table-movil">
+            <div class="container-table-movil" data-aos="fade-right" data-aos-duration="1000">
                 <div class="fila">
                     <div class="columna">
                         <div class="header">Status</div>
@@ -377,7 +355,7 @@ include "./CONTROLLER/conexion.php";
                 </div>
             </div>
 
-            <div class="container-table-movil">
+            <div class="container-table-movil" data-aos="fade-left" data-aos-duration="1000">
                 <div class="fila">
                     <div class="columna">
                         <div class="header">Fecha</div>
@@ -386,7 +364,7 @@ include "./CONTROLLER/conexion.php";
                 </div>
             </div>
 
-            <div class="container-table-movil">
+            <div class="container-table-movil" data-aos="fade-right" data-aos-duration="1000">
                 <div class="fila">
                     <div class="columna">
                         <div class="header">Tiempo</div>
@@ -395,7 +373,7 @@ include "./CONTROLLER/conexion.php";
                 </div>
             </div>
 
-            <div class="container-table-movil">
+            <div class="container-table-movil" data-aos="fade-left" data-aos-duration="1000">
                 <div class="fila">
                     <div class="columna">
                         <div class="header">Localidad</div>
@@ -404,7 +382,7 @@ include "./CONTROLLER/conexion.php";
                 </div>
             </div>
 
-            <div class="container-table-movil">
+            <div class="container-table-movil" data-aos="fade-right" data-aos-duration="1000">
                 <div class="fila">
                     <div class="columna">
                         <div class="header">Cargo</div>
@@ -413,7 +391,7 @@ include "./CONTROLLER/conexion.php";
                 </div>
             </div>
 
-            <div class="container-table-movil">
+            <div class="container-table-movil" data-aos="fade-left" data-aos-duration="1000">
                 <div class="fila">
                     <div class="columna">
                         <div class="header">Credenciales</div>
@@ -422,7 +400,7 @@ include "./CONTROLLER/conexion.php";
                 </div>
             </div>
 
-            <div class="container-table-movil">
+            <div class="container-table-movil" data-aos="fade-right" data-aos-duration="1000">
                 <div class="fila">
                     <div class="columna">
                         <div class="header">DPT</div>
@@ -472,7 +450,7 @@ include "./CONTROLLER/conexion.php";
 
                         <input type='checkbox' id='check' />
                         <span class="menu">
-                            <li><a href="./index.html">Panel</a></li>
+                            <li><a href="./panel.php">Panel</a></li>
                             <li><a href="./control_asistencia.php">Control de Asistencia</a></li>
 
                             <label for="check" class="close-menu"><i class='bx bx-x'></i></label>
@@ -491,39 +469,18 @@ include "./CONTROLLER/conexion.php";
                         <div class="row align-items-center">
                             <div class="col-lg-5">
 
-                                <div id="carouselExampleCaptions" class="carousel slide">
-                                    <div class="carousel-indicators">
-                                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                    </div>
+                                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
-                                            <img src="./images/asistencia_1.avif" class="d-block w-100" alt="...">
-                                            <div class="carousel-caption d-none d-md-block">
-                                                <h5>Monitoring Program</h5>
-                                                <p>Lo que sabemos es una gota, lo que ignoramos es un océano!</p>
-                                            </div>
+                                            <img src="./images/colaboracion.png" class="d-block w-100" alt="...">
                                         </div>
                                         <div class="carousel-item">
-                                            <img src="./images/asistencia_2.avif" class="d-block w-100" alt="...">
-                                            <div class="carousel-caption d-none d-md-block">
-                                            </div>
+                                            <img src="./images/analisis.png" class="d-block w-100" alt="...">
                                         </div>
                                         <div class="carousel-item">
-                                            <img src="./images/asistencia_3.avif" class="d-block w-100" alt="...">
-                                            <div class="carousel-caption d-none d-md-block">
-                                            </div>
+                                            <img src="./images/clasificacion.png" class="d-block w-100" alt="...">
                                         </div>
                                     </div>
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Previous</span>
-                                    </button>
-                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Next</span>
-                                    </button>
                                 </div>
 
                             </div>
@@ -670,7 +627,7 @@ include "./CONTROLLER/conexion.php";
             include "./CONTROLLER/Uload.php";
             ?>
 
-            <div class="container-tables">
+            <div class="container-tables" data-aos="zoom-in-right" data-aos-duration="1500">
                 <table class="table table-bordered">
 
                     <thead class="table-dark">
@@ -724,7 +681,7 @@ include "./CONTROLLER/conexion.php";
 
                 <br>
 
-                <div class="container-table-movil">
+                <div class="container-table-movil" data-aos="fade-right" data-aos-duration="1000">
                     <div class="fila">
                         <div class="columna">
                             <div class="header">CI</div>
@@ -733,7 +690,7 @@ include "./CONTROLLER/conexion.php";
                     </div>
                 </div>
 
-                <div class="container-table-movil">
+                <div class="container-table-movil" data-aos="fade-left" data-aos-duration="1000">
                     <div class="fila">
                         <div class="columna">
                             <div class="header">Nombre</div>
@@ -742,7 +699,7 @@ include "./CONTROLLER/conexion.php";
                     </div>
                 </div>
 
-                <div class="container-table-movil">
+                <div class="container-table-movil" data-aos="fade-right" data-aos-duration="1000">
                     <div class="fila">
                         <div class="columna">
                             <div class="header">Apellido</div>
@@ -751,7 +708,7 @@ include "./CONTROLLER/conexion.php";
                     </div>
                 </div>
 
-                <div class="container-table-movil">
+                <div class="container-table-movil" data-aos="fade-left" data-aos-duration="1000">
                     <div class="fila">
                         <div class="columna">
                             <div class="header">Cliente</div>
@@ -760,7 +717,7 @@ include "./CONTROLLER/conexion.php";
                     </div>
                 </div>
 
-                <div class="container-table-movil">
+                <div class="container-table-movil" data-aos="fade-right" data-aos-duration="1000">
                     <div class="fila">
                         <div class="columna">
                             <div class="header">Status</div>
@@ -769,7 +726,7 @@ include "./CONTROLLER/conexion.php";
                     </div>
                 </div>
 
-                <div class="container-table-movil">
+                <div class="container-table-movil" data-aos="fade-left" data-aos-duration="1000">
                     <div class="fila">
                         <div class="columna">
                             <div class="header">Fecha</div>
@@ -778,7 +735,7 @@ include "./CONTROLLER/conexion.php";
                     </div>
                 </div>
 
-                <div class="container-table-movil">
+                <div class="container-table-movil" data-aos="fade-right" data-aos-duration="1000">
                     <div class="fila">
                         <div class="columna">
                             <div class="header">Tiempo</div>
