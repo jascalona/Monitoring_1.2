@@ -108,13 +108,17 @@ button .button{
     #check:checked ~ .menu {right: 0;}
 }
 
+/*panel*/
+.slider_section  h2{
+    color: #969393f3;
+}
 
 /*public_i*/
 .public_i{
     background: #5251510e;
     border: solid 1px #f3f3f348;
-    border-radius: 30px;
-    max-width: 90%;
+    border-radius: 10px;
+    max-width: 80%;
     margin: 0 auto;
     padding: 50px;
     color: #fff;
@@ -190,6 +194,16 @@ button .button{
 }
 
  
+/*Diseño search*/
+.search{
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+.section-comentarios{
+    max-width: 60%;
+    margin-top: 20px auto;
+}
 
 
 @media (max-width: 980px) {
@@ -200,6 +214,16 @@ button .button{
     .container-table-movil{
         display: block;
     }
+
+    .container-drop-m button p{
+        font-size: 14px;
+    }
+
+    .search{
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
 
 
 }

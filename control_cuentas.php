@@ -166,8 +166,8 @@ include "./CONTROLLER/conexion.php";
             <?php include './CONTROLLER/drop_m.php'; ?>
             <form action="" method="POST">
                 <div class="btn-drop-m">
-                    <button type="submit" name="drop" class="btn btn-primary" value="enviar">
-                        limpiar datos <i class='bx bx-brush-alt'></i>
+                    <button type="submit" name="drop" class="button" value="enviar">
+                        <p>limpiar datos <i class='bx bx-brush-alt'></i></p>
                     </button>
                 </div>
             </form>
@@ -175,8 +175,8 @@ include "./CONTROLLER/conexion.php";
 
             <div class="btn-export">
                 <form action="" method="POST">
-                    <button name="export" class="btn btn-primary">
-                        <a href="./CONTROLLER/export_data.php">Exportar Datos <i class='bx bx-export'></i></a>
+                    <button name="export" class="button">
+                        <a href="./CONTROLLER/export_data.php"><p>Exportar Datos <i class='bx bx-export'></i></p></a>
                     </button>
                 </form>
             </div>
@@ -392,104 +392,95 @@ include "./CONTROLLER/conexion.php";
 
 
         <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
-            <div class="row pt-5">
-                <div class="col-lg-3 col-md-6 mb-5">
-                    <a href="" class="navbar-brand">
-                        <h1 class="text-primary"><span class="text-white">GRUPO XDV</span></h1>
-                    </a>
-                    <p>
-                        Somos XDV, nos enfocamos con calidad, excelencia y gran entusiasmo para lograr los retos propuestos y alcanzar la satisfacción tanto de nuestros clientes internos y externos,
-                        a través de nuestra tecnología, nuestra experiencia y nuestro servicio profecional, que permite que su negocio funcione de un modo
-                        más inteligente, facil y rapido sea cual sea su situación.
-                    </p>
-                    <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">SIGUENOS</h6>
-                    <div class="d-flex justify-content-start">
-                        <p class="btn btn-outline-primary btn-square mr-2"><i class='bx bxl-facebook'></i></p>
-                        <p class="btn btn-outline-primary btn-square mr-2"><i class='bx bxl-instagram'></i></p>
-                        <p class="btn btn-outline-primary btn-square"><i class='bx bxl-whatsapp'></i></p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-5">
-                    <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Acceso Directo</h5>
-                    <div class="d-flex flex-column justify-content-start">
-                        <a class="text-white-50 mb-2" href="./panel.php"><i class="fa fa-angle-right mr-2"></i>Panel</a>
-                        <a class="text-white-50 mb-2" href="./control_asistencia.php"><i class="fa fa-angle-right mr-2"></i>Control de Asistencia</a>
-                    </div>
-                </div>
+        <footer>
+            <div
+                class="container-fluid bg-dark text-white-50 py-3 px-sm- px-lg-5"
+                style="margin-top: 90px">
+                <div class="row pt-2">
+                    <div class="col-lg-3 col-md-6 mb-5">
+                        <h5
+                            class="text-white text-uppercase mb-3"
+                            style="letter-spacing: 5px">
+                            recursos
+                        </h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-white-50 mb-2" href="https://grupoxdv.com/Partner/"><i class="fa fa-angle-right mr-2"></i>E-elearning</a>
+                            <a
+                                class="text-white-50 mb-2"
+                                href="https://grupoxdv.com/monitoring/"><i class="fa fa-angle-right mr-2"></i>Virtual Assistance</a>
+                            <a
+                                class="text-white-50 mb-2"
+                                href="https://grupoxdv.com/support_kip/"><i class="fa fa-angle-right mr-2"></i>Support Kip</a>
+                            <a
+                                class="text-white-50 mb-2"
+                                href="https://grupoxdv.com/phone_list/"><i class="fa fa-angle-right mr-2"></i>PhoneBook</a>
+                        </div>
 
-                <div class="col-lg-3 col-md-6 mb-5"></div>
-
-                <div class="col-lg-3 col-md-6 mb-5">
-                    <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Contacto</h5>
-                    <p><i class="fa fa-map-marker-alt mr-2"></i>Av. Ávila, Caracas 1060, Miranda, Venezuela</p>
-                    <p><i class="fa fa-phone-alt mr-2"></i>+58 05009376934</p>
-                    <p><i class="fa fa-envelope mr-2"></i>cac@grupoxven.com</p>
-
-                    <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Agrega tus Comentarios!</h6>
-                    <div class="w-100">
-                        <div class="input-group">
-                            <div class="input-group-append">
-
-                                <!--moddal comentarios-->
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">
-                                    Agregar Comentario
-                                </button>
-
-                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h1 class="modal-title text-dark fs-5" id="exampleModalLabel">Nuevo Comentario</h1>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-
-                                                <form method="POST">
-                                                    <?php include './CONTROLLER/Uload_comentario.php'; ?>
-
-                                                    <div class="mb-3">
-                                                        <p for="recipient-name" class="text-dark col-form-label">Hola <b><?php echo $_SESSION['name']; ?></b>, queremos tu opinión sobre nuestro Programa!</p>
-                                                        <input type="hidden" name="ci" id="ci" value="<?php echo $_SESSION['CI']; ?>">
-                                                        <input type="hidden" name="name" id="name" value="<?php echo $_SESSION['name']; ?>">
-                                                        <input type="hidden" name="surname" id="surname" value="<?php echo $_SESSION['surname']; ?>">
-
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <label for="message-text" class="col-form-label text-dark ">Message:</label>
-                                                        <textarea class="form-control" name="message" id="message" placeholder="Ingrese un Comentario..."></textarea>
-                                                    </div>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                                <button name="btn-comen" type="submit" value="submit" class="btn btn-primary">Enviar Comentario</button>
-                                            </div>
-
-                                            </form>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--moddal comentarios-->
-
+                        <h6
+                            class="text-white text-uppercase mt-4 mb-3"
+                            style="letter-spacing: 5px"></h6>
+                        <div class="d-flex justify-content-start">
+                            <p class="btn btn-outline-primary btn-square mr-2">
+                                <i class="bx bxl-facebook"></i>
+                            </p>
+                            <p class="btn btn-outline-primary btn-square mr-2">
+                                <i class="bx bxl-instagram"></i>
+                            </p>
+                            <p class="btn btn-outline-primary btn-square">
+                                <i class="bx bxl-whatsapp"></i>
+                            </p>
                         </div>
                     </div>
+
+                    <!--ACCESOS DIRECTOS-->
+                    <div class="col-lg-3 col-md-6 mb-5">
+                        <h5
+                            class="text-white text-uppercase mb-3"
+                            style="letter-spacing: 5px">
+                            Acceso Directo
+                        </h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-white-50 mb-2" href="https://mail.grupoxven.com/owa/auth/logon.aspx?replaceCurrent=1&url=https%3a%2f%2fmail.grupoxven.com%2fowa"><i class="fa fa-angle-right mr-2"></i>Enlace Outlook en linea</a>
+
+                            <a class="text-white-50 mb-2" href="http://portalrrhh/nomina/Empleados/Default.asp"><i class="fa fa-angle-right mr-2"></i>Portal Picasso</a>
+
+                            <a class="text-white-50 mb-2" href="https://www.grupoxdv.com/contacto.html"><i class="fa fa-angle-right mr-2"></i>Contacto</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mb-5"></div>
+
+                    <!--CONTACTO-->
+                    <div class="col-lg-3 col-md-6 mb-5">
+                        <h5
+                            class="text-white text-uppercase mb-4"
+                            style="letter-spacing: 5px">
+                            Contacto
+                        </h5>
+                        <p>
+                            <i class="fa fa-map-marker-alt mr-2"></i>Av. Ávila, Caracas 1060,
+                            Miranda, Venezuela
+                        </p>
+                        <p><i class="fa fa-phone-alt mr-2"></i>+58 05009376934</p>
+                        <p><i class="fa fa-envelope mr-2"></i>cac@grupoxven.com</p>
+                        <img src="./image/logo_xerox.png" alt="">
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
-            <div class="row">
-                <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
-                    <p class="m-0 text-white-50">Virtual Assistance &copy; <a href="" style="color: red;">XDV</a>. Todos los derechos reservados. XDV®</a>
-                    </p>
-                </div>
-                <div class="col-lg-6 text-center text-md-right">
-                    <p class="m-0 text-white-50">Designed by <a href="" style="color: red;">JE</a>
-                    </p>
+
+            <div
+                class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5"
+                style="border-color: rgba(256, 256, 256, 0.1) !important">
+                <div class="row">
+                    <div class="derechos-reservados">
+                        <p style="text-align: center" class="m-0 text-white-50">
+                            2010 - 2024 &copy; Xerox de Venezuela. Todos los derechos
+                            reservados. XDV®
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </footer>
         <!-- Footer End -->
 
     <?php

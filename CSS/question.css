@@ -4,12 +4,14 @@
     text-align: center;
     margin: 3%;
     font-size: 45px;
+    color: #ffffffe4;
 }
 
 .container-preguntas-frecuentes section {
     width: 70vw;
     padding: 40px;
-    background: rgba(235, 235, 235, 0.149);
+    background: #5251511b;
+    border: solid 1px #f3f3f37b;
     margin: auto;
     margin-top: 20px;
     display: flex;
@@ -19,7 +21,7 @@
   }
   
   summary{
-    background: rgb(49, 55, 63);
+    background: rgb(60, 60, 60);
     color: white;
     padding: 10px;
     cursor: pointer;
@@ -28,8 +30,8 @@
    .container-preguntas-frecuentes section p  {
     padding: 10px;
     font-size: 10px;
-    background:white;
-    color: rgb(61, 61, 61);
+    background:rgba(255, 255, 255, 0.538);
+    color: rgb(48, 48, 48);
    }
 
    @media (max-width: 700px) {
@@ -43,8 +45,7 @@
 
     .container-preguntas-frecuentes section p{
         font-size: 13px;
+        color: #fff;
     }
-
-
 
    }
