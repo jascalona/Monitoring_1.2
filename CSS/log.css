@@ -6,53 +6,61 @@
 }
 
 body{
-    background-image: url(./images/spencer-davis-ilQmlVIMN4c-unsplash.jpg);
+    background-image: url(../images/header_log.jpg);
+    background-size: cover;
     background-repeat: no-repeat;
-    background-size: cover ;
-}
-
-
-@media (max-width: 1500px) {
-    body{
-        background-size: cover;
-        height: 1000px
-    }
+    background-attachment: fixed;
+    background-position: center;
 }
 
 .container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    margin-top: 14%;
+    max-width: 100%;
+    margin: 5% auto;
+    padding: 20px;
 }
 
-
 .background-lg{
-background: rgba(200, 192, 194, 0.681);
-padding:  45px 90px;
-border-radius: 50px;
+    background: rgba(128, 128, 128, 0.212);
+    max-width: 360px;
+    min-height: 360px;
+    margin: 0 auto;
+    height: 400px;
+    padding: 30px;
+    color: #fff;
+}
+
+@media (max-width: 450px) {
+    .container{
+        margin-top: -50px; 
+    }
+    .background-lg input{
+        width: 110%;
+        margin-left: -5%;
+    }
 }
 
 .background-lg img{
-    width: 200px;
-    margin: auto;
+    width: 100px;
     margin-bottom: 20px;
 }
 
-.background-lg label i{
+.background-lg .btn-log{
+    border: solid 1px #f3f3f35f;
+    border-radius: 10px;
+    padding: 8px 10px;
+    width: 100%;
+    background: rgba(60, 60, 60, 0.26);
+    color: #fff;
+}
+
+.btn-log:hover{
+    background: #0000007d;
+}
+
+.btn-login{
     text-align: center;
-    font-size: 15px;
-    padding: 5px;
-    
+    padding: 15px;
 }
-
-.background-lg input {
-    padding-right: 100px;
-}
-
-
-
 
 
 
