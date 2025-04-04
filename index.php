@@ -52,9 +52,9 @@
                     <input type="email" name="user" id="user" placeholder="Ingrese su Usuario">
                     <br>
 
-                    <label for="">Contraseña</label>
+                    <label for="">Clave</label>
                     <br>
-                    <input type="password" name="password" id="password" placeholder="Ingrese su Contraseña">
+                    <input type="password" name="password" id="password" placeholder="Ingrese su Clave">
                 </div>
 
                 <div class="btn">   

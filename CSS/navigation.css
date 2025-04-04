@@ -6,11 +6,7 @@
 }
 
 body{
-    background-image: url(../images/img_body.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
+    background: red;
 }
 
 /*definition*/

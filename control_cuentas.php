@@ -39,7 +39,7 @@ include "./CONTROLLER/conexion.php";
 
 </head>
 
-<body class="sub_page">
+<body style="background:rgb(36, 36, 37);" class="sub_page">
 
 
     <?php
@@ -186,7 +186,7 @@ include "./CONTROLLER/conexion.php";
         ?>
         <br><br>
 
-        <div class="container-tables" data-aos="zoom-in-right" data-aos-duration="1500">
+        <div class="container-tables">
             <div class="tables-responsives">
                 <table class="table table-bordered">
 

@@ -39,7 +39,7 @@ if (!empty($_SESSION["CI"])) {
 
 </head>
 
-<body>
+<body style="background:rgb(36, 36, 37);">
 
 
   <?php
